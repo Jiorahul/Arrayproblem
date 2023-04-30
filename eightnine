@@ -1,0 +1,142 @@
+q1>public class static_class {
+    static int x=10;
+    static  int y;
+    static void func(int z){
+        System.out.println("x ="+x);
+        System.out.println("y ="+y);
+        System.out.println("z ="+z);
+    }
+    static {
+        System.out.println("intilazion  static runing code");
+        y=x+10;
+    }
+    public static void main(String[] args){
+        func(8);
+    }
+}
+q2>public class EmployeeWageUC4 {
+    public static void main(String[] args) {
+        final int IS_PART_TIME=1;
+        final int IS_FULL_TIME=2;
+        final int Emp_RATE_PER_HR=20;
+        int EmpHr=0;
+        int EmpWage=0;
+        int empcheck=(int)(Math.floor(Math.random()*10)%3);
+        switch (empcheck){
+            case IS_PART_TIME :
+                EmpHr=4;
+                break;
+            case IS_FULL_TIME:
+                EmpHr=8;
+                break;
+            default:EmpHr=0;
+        }
+        EmpWage=EmpHr*Emp_RATE_PER_HR;
+        System.out.println("Employee WAge :"+EmpWage);
+    }
+}
+q3>public class EmployeeWageUC5 {
+    public static final int IS_PART_TIME=1;
+    public static final int IS_FULL_TIME=2;
+    public static final int Emp_RATE_PER_HR=20;
+    public static final int NUM_OF_WORKING_DAYS=20;
+
+    public static void main(String[] args) {
+        int EmpHr=0;
+        int EmpWage=0;
+        int totalEmpWage=0;
+        for (int day=0;day<NUM_OF_WORKING_DAYS;day++){
+            int empcheck=(int)(Math.floor(Math.random()*10)%3);
+
+            switch (empcheck){
+                case IS_PART_TIME :
+                    EmpHr=4;
+                    break;
+                case IS_FULL_TIME:
+                    EmpHr=8;
+                    break;
+                default:
+                    EmpHr=0;
+            }
+            EmpWage=EmpHr*Emp_RATE_PER_HR;
+            totalEmpWage *=EmpWage;
+            System.out.println(totalEmpWage);
+            System.out.println(EmpWage);
+        }
+    }
+
+}
+q4>import java.util.Scanner;
+
+public class FlotnumU2 {
+    public static void main(String[] args) {
+
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter the total number");
+        Float f1= sc.nextFloat();
+        System.out.println("Enter the Second number");
+        Float f2=sc.nextFloat();
+
+        Float f3= (f1>f2?f1:f2);
+        System.out.println(f3);
+
+
+    }
+}
+q5>class Test<T>{
+    T obj;
+
+    public Test(T obj) {
+        this.obj = obj;
+    }
+
+    public T getObj() {
+        return obj;
+    }
+}
+public class GenericUC5 {
+    public static void main(String[] args) {
+        Test<Integer> iObj=new Test<Integer>(454);
+        System.out.println(iObj.getObj());
+
+       Test<String> sobj=new Test<String>("rahul");
+        System.out.println(sobj.getObj());
+    }
+
+
+
+
+    }
+q6>public class LongString {
+    public static void main(String[] args) {
+        String a="Ramaaaaa";
+        String b="Shyam";
+        String c="RamShayam";
+        if(a.length()>b.length() && a.length()>c.length()) //|| ||;
+        {
+            System.out.println(a);
+
+        } else if (b.length()>a.length() && b.length()>c.length()) {
+            System.out.println(b);
+
+        }else if (c.length()>a.length() && c.length()>b.length()){
+            System.out.println(c);
+        }
+    }
+}
+q7>public class MaxNumUC1 {
+    public static void main(String[] args) {
+        int num1=15;
+        int num2=97;
+        int num3=20;
+        if(num1>=num2 && num1>=num3){
+            System.out.println(num1 +"maximum number");
+        } else if (num2>=num3 &&num2>=num1) {
+            System.out.println(num2 +"maximum number");
+
+        } else if (num3>=num1 &&num3>=num2){
+            System.out.println(num3 +"maximum number");
+        }
+
+    }
+}
