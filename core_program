@@ -1,0 +1,152 @@
+q1>flip coin
+public class FilpCoin {
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the number of times FLIP the COIN*");
+        int n = sc.nextInt();
+       // System.out.println("Enter the number of times FLIP the COIN*");
+        int head =0,tail=0;
+        for(int i=0;i<n;i++){
+            if(Math.random()<0.5){
+                head++;
+            }else{
+                tail++;
+            }
+        }
+        int hper = (head*100)/n;
+        int tper = (tail*100)/n;
+        System.out.println("Head Percentage==>>"+hper+"%");
+        System.out.println("Tail Percentage==>>"+tper+"%");
+        System.out.println("HEADS ==>> "+head);
+        System.out.println("TAILS ==>> "+tail);
+
+    }
+}
+q2>power of number
+public class PowerOfNumber {
+    static int power(int base,int exponent){
+    int power=1;
+    for (int i=0;i<=exponent;i++)
+
+    power=power*base;
+    return power;
+    }
+
+    public static void main(String[] args) {
+        int base,exponent;
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter the base");
+        base= sc.nextInt();
+
+        System.out.println("Enter the exponent");
+        exponent=sc.nextInt();
+        int power=power(base,exponent);
+        System.out.println(base+"to the power of"+exponent+"is"+power);
+    }
+}
+q3>Harmonic
+import java.util.Scanner;
+
+public class Harmonic {
+    public static void main(String[] args) {
+        double  result=0,num=0,i;
+        int n;
+
+        Scanner sc=new Scanner(System.in);
+        System.out.println("enter the harmoni you want to find");
+        n= sc.nextInt();
+
+        for(i=1;i<=n;i++){
+            num=num+(1)/i;
+            result=num;
+
+        }
+        System.out.println("the value of harmonic no"+result);
+    }
+}
+q4>factors
+import java.util.Scanner;
+
+public class PrimeFactor {
+    public static void main(String[] args) {
+        int n;
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter the number");
+        n=sc.nextInt();
+
+        for(int i=2;i<=n;i++){
+            while (n%i==0){
+                System.out.println(i +"");
+                n=n/i;
+            }
+        }
+        if(n>2){
+            System.out.println(n);
+        }
+    }
+}
+q5>import java.util.Scanner;
+
+public class Quotient {
+    public static void main(String[] args) {
+        int num1,num2, quotient=0,remainder=0;
+        System.out.println("Enter the value of num1 and num2");
+        Scanner sc=new Scanner(System.in);
+        num1= sc.nextInt();
+        num2= sc.nextInt();
+
+
+        quotient=num1/num2;
+        remainder=num1%num2;
+        System.out.println(quotient);
+        System.out.println(remainder);
+    }
+}
+q6>public class Swap {
+    public static void main(String[] args) {
+        float f=10.2f,s=20.2f;
+        System.out.println("Before swap--");
+        System.out.println("first number"+f);
+        System.out.println("second number"+s);
+
+        float temp=f;
+        f=s;
+        s=temp;
+        System.out.println("after swaping--");
+        System.out.println(f);
+        System.out.println(s);
+    }
+}
+q7>import java.util.Scanner;
+
+public class EvenOdd {
+    public static void main(String[] args) {
+        int num;
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter the number");
+        num=sc.nextInt();
+       if (num%2==0){
+           System.out.println("its even number"+num);
+       }else {
+           System.out.println("its odd number"+num);
+       }
+    }
+}
+q8>public class VowelConstant {
+    public static void main(String[] args) {
+    char ch='z';
+    switch (ch){
+        case 'a':
+        case 'i':
+        case 'o':
+        case 'u':
+        case 'e':
+            System.out.println(ch+"is vowel");
+            break;
+        default:
+            System.out.println(ch+"is consonant");
+    }
+
+    }
+}
